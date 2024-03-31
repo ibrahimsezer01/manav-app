@@ -1,0 +1,71 @@
+<header class="header_section">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col-md-1">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Menü -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            
+                            
+                           
+                            <% if (isAuth) { %>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Home' ? 'text-warning' : '' %>" href="/">Ana Sayfa</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Shop' ? 'text-warning' : '' %>" href="/shop">Market</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'About' ? 'text-warning' : '' %>" href="/about">Hakkımızda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Contact' ? 'text-warning' : '' %>" href="/contact">İletişim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Products' ? 'text-warning' : '' %>" href="/products">Ürünlerim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Products' ? 'text-warning' : '' %>" href="/products">ADD PRODUCTS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Logout' ? 'text-warning' : '' %>" href="/logout">Çıkış Yap</a>
+                                </li>
+                            <% } else { %>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Home' ? 'text-warning' : '' %>" href="/">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Log in' ? 'text-warning' : '' %>" href="/login">LOG IN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= page_name === 'Register' ? 'text-warning' : '' %>" href="/register">REGISTER</a>
+                                </li>
+                            <% } %> 
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Arama Alanı -->
+            <div class="col-md-1">
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="search_icon"><a href="#"><img src="/images/search-icon.png" alt="Search Icon"></a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
